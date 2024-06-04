@@ -2,8 +2,8 @@ import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
-import SessionProvider from './providers'
- 
+import SessionProvider from './providers';
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Acme Dashboard',
@@ -22,11 +22,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-        <body className={`${inter.className} antialiased`}>
-          <SessionProvider session={session}>
-            {children}
-          </SessionProvider>
-        </body>
+      <body className={`${inter.className} antialiased`}>
+        <SessionProvider session={session}>{children}</SessionProvider>
+      </body>
     </html>
   );
 }
