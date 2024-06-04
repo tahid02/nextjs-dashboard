@@ -6,8 +6,8 @@ import SessionProvider from './providers';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Acme Dashboard',
-    default: 'Acme Dashboard',
+    template: '%s |  home ',
+    default: 'home',
   },
   description: 'The official Next.js Course Dashboard, built with App Router.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
